@@ -12,6 +12,7 @@ export function ProfileForm({ user }: any) {
       name: formData.get("name"),
       bio: formData.get("bio"),
       age: formData.get("age"),
+      email: formData.get("email"),
       image: formData.get("image"),
     };
 
@@ -40,6 +41,9 @@ export function ProfileForm({ user }: any) {
         ></textarea>
         <label htmlFor="age">Age</label>
         <input type="text" name="age" defaultValue={user?.age ?? 0} />
+        <label htmlFor="email">Email</label>
+        <input type="email" name="email" defaultValue={user?.email ?? ""} />
+
         <label htmlFor="image">Profile Image URL</label>
         <input type="text" name="image" defaultValue={user?.image ?? ""} />
 
